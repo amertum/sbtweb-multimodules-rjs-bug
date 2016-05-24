@@ -1,0 +1,25 @@
+@()
+
+@script = {
+    <script type="text/javascript">
+        var global = {
+            hookFn: function($, fileupload, player) {
+                console.log("hook");
+                if (player.isReady()) {
+                    $("#player").html("Player is loaded");
+                }
+            }
+        };
+    </script>
+}
+
+@layout("Upload", "lib/dev-web/js/main.js", script) {
+
+    <h1>Test assets from module</h1>
+
+    <p>
+        Open developer console using F12 key, go to network panel and refresh the page to see the resources <span class="label label-danger">loading failure</span>.
+    </p>
+    <div id="player">Player cannot be loaded</div>
+
+}

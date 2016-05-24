@@ -1,0 +1,7 @@
+# Routes
+
+GET     /upload-assets-from-root                             dev.Uploads.uploadAssetsFromRoot
+GET     /upload-assets-from-module                           dev.Uploads.uploadAssetsFromModule
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)

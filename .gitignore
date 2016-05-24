@@ -1,0 +1,15 @@
+/conf/application-*.conf
+logs
+target
+project/project
+project/target
+/*.iml
+/.idea
+/.idea_modules
+/.classpath
+/.project
+/.settings
+/RUNNING_PID
+tmp
+.history
+dist

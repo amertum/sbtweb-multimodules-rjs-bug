@@ -1,0 +1,3 @@
+#!/bin/sh
+rm target/universal/stage/RUNNING_PID
+sbt clean testProd

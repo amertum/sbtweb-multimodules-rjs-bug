@@ -1,0 +1,26 @@
+@(title: String, module: String, script: Html = Html(""))(content: Html)
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta lang="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+
+        <title>@title</title>
+
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("lib/bootstrap/css/bootstrap.css")" />
+    </head>
+    <body>
+        <div class="container-fluid">
+            @content
+        </div>
+
+        @*<!-- Javascript are placed at the end of the document so the pages load faster -->*@
+        <script type="text/javascript" data-main="@routes.Assets.versioned(module)" src="@routes.Assets.versioned("lib/requirejs/require.js")"></script>
+
+        @script
+    </body>
+</html>
